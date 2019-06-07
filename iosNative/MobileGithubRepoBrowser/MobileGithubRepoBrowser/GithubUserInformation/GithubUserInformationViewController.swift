@@ -11,7 +11,11 @@ import Foundation
 import UIKit
 
 class GithubUserInformationViewController: UIViewController {
+    var githubUser: GithubUserModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = self.githubUser?.login
     }
 }

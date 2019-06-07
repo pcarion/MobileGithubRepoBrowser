@@ -16,6 +16,7 @@ class GithubUserSelectionViewController: UIViewController {
     @IBOutlet weak var githubUserName: UITextField!
     @IBOutlet weak var suggestionsTableView: UITableView!
     @IBOutlet weak var selectUserButton: UIButton!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     @IBAction func onSelectGithubUserClick(_ sender: Any) {
         // first we check tht we have an inout for the github user name
@@ -30,13 +31,21 @@ class GithubUserSelectionViewController: UIViewController {
 //                print(githubUserModel?.name)
 //                print("errorMessage:")
 //                print(errorMessage)
-                
-                guard let destinationViewController = self.storyboard?.instantiateViewController(withIdentifier: "GithubUserInformationViewController") as? GithubUserInformationViewController else {
-                    print("could not find GithubUserInformationViewController");
-                    return
+                if let githubUserModel = githubUserModel {
+                    guard let destinationViewController = self.storyboard?.instantiateViewController(withIdentifier: "GithubUserInformationViewController") as? GithubUserInformationViewController else {
+                        print("could not find GithubUserInformationViewController");
+                        return
+                    }
+                    destinationViewController.githubUser = githubUserModel
+                    
+                    // dismiss activity indicator
+                    self.activityIndicatorView.stopAnimating()
+                    self.navigationController?.pushViewController(destinationViewController, animated: true)
+                    // change the back key title - otherwise would use the title of this VC
+                    self.navigationController?.navigationBar.topItem?.title = "back";
                 }
-                self.navigationController?.pushViewController(destinationViewController, animated: true)
             }
+            activityIndicatorView.startAnimating()
         }
     }
     override func viewDidLoad() {

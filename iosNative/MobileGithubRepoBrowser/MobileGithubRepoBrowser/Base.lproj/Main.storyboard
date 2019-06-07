@@ -37,7 +37,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="baK-dn-NTt">
                                 <rect key="frame" x="14" y="250" width="380" height="140"/>
@@ -46,19 +46,25 @@
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOp-PD-Trw">
-                                <rect key="frame" x="73" y="433" width="260" height="30"/>
+                                <rect key="frame" x="73" y="489" width="260" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Select Github User"/>
                                 <connections>
                                     <action selector="onSelectGithubUserClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MBa-vu-GKN"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="IYG-1a-t8F">
+                                <rect key="frame" x="193" y="438" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Select Github User" id="iP6-40-XRm"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="IYG-1a-t8F" id="H3k-WV-HDL"/>
                         <outlet property="githubUserName" destination="5Tv-JA-Ocf" id="G7T-9d-7GY"/>
                         <outlet property="selectUserButton" destination="yOp-PD-Trw" id="41V-5u-em0"/>
                         <outlet property="suggestionsTableView" destination="baK-dn-NTt" id="c3q-W4-sZz"/>
