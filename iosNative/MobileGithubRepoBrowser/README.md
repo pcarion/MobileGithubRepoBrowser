@@ -14,3 +14,8 @@
 * https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/ImplementNavigation.html
 * https://www.credera.com/blog/custom-application-development/creating-a-dropdown-field-in-swift-for-ios/
 * https://peterwitham.com/swift-archives/intermediate/creating-and-using-ios-prototype-cells-with-swift/
+
+* https://www.hackingwithswift.com/example-code/uikit/fixing-unable-to-dequeue-a-cell-with-identifier
+* https://www.hackingwithswift.com/example-code
+
+
