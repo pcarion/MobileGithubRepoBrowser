@@ -22,6 +22,18 @@
 		1882132922AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882132822AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift */; };
 		1882132A22AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882132822AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift */; };
 		1882132B22AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882132822AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift */; };
+		1882132E22AAB81F009909A4 /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882132D22AAB81F009909A4 /* GithubApi.swift */; };
+		1882132F22AAB81F009909A4 /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882132D22AAB81F009909A4 /* GithubApi.swift */; };
+		1882133022AAB81F009909A4 /* GithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882132D22AAB81F009909A4 /* GithubApi.swift */; };
+		1882133322AAB910009909A4 /* GithubUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882133222AAB910009909A4 /* GithubUserModel.swift */; };
+		1882133422AAB910009909A4 /* GithubUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882133222AAB910009909A4 /* GithubUserModel.swift */; };
+		1882133522AAB910009909A4 /* GithubUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882133222AAB910009909A4 /* GithubUserModel.swift */; };
+		1882133722AABBA0009909A4 /* parseGithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882133622AABBA0009909A4 /* parseGithubUser.swift */; };
+		1882133822AABBA0009909A4 /* parseGithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882133622AABBA0009909A4 /* parseGithubUser.swift */; };
+		1882133922AABBA0009909A4 /* parseGithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882133622AABBA0009909A4 /* parseGithubUser.swift */; };
+		1882133B22AAC3D6009909A4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882133A22AAC3D6009909A4 /* AppError.swift */; };
+		1882133C22AAC3D6009909A4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882133A22AAC3D6009909A4 /* AppError.swift */; };
+		1882133D22AAC3D6009909A4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882133A22AAC3D6009909A4 /* AppError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +70,10 @@
 		1882132222AA957C009909A4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1882132422AAA311009909A4 /* GithubUserSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserSelectionViewController.swift; sourceTree = "<group>"; };
 		1882132822AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GUS-extension+SuggestionTableView.swift"; sourceTree = "<group>"; };
+		1882132D22AAB81F009909A4 /* GithubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApi.swift; sourceTree = "<group>"; };
+		1882133222AAB910009909A4 /* GithubUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserModel.swift; sourceTree = "<group>"; };
+		1882133622AABBA0009909A4 /* parseGithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parseGithubUser.swift; sourceTree = "<group>"; };
+		1882133A22AAC3D6009909A4 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +125,8 @@
 		1874F8CA22AA7A5500568013 /* MobileGithubRepoBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				1882133122AAB8EE009909A4 /* Model */,
+				1882132C22AAB7D5009909A4 /* Network */,
 				1882132322AAA20B009909A4 /* GithubUserSelection */,
 				1882132022AA9090009909A4 /* SupportingFiles */,
 				1874F8CD22AA7A5500568013 /* ViewController.swift */,
@@ -142,6 +160,7 @@
 			children = (
 				1874F8D722AA7A5600568013 /* Info.plist */,
 				1882131C22AA902E009909A4 /* AppDelegate.swift */,
+				1882133A22AAC3D6009909A4 /* AppError.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -153,6 +172,23 @@
 				1882132822AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift */,
 			);
 			path = GithubUserSelection;
+			sourceTree = "<group>";
+		};
+		1882132C22AAB7D5009909A4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1882132D22AAB81F009909A4 /* GithubApi.swift */,
+				1882133622AABBA0009909A4 /* parseGithubUser.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1882133122AAB8EE009909A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1882133222AAB910009909A4 /* GithubUserModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,8 +322,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1882133722AABBA0009909A4 /* parseGithubUser.swift in Sources */,
 				1882131D22AA902E009909A4 /* AppDelegate.swift in Sources */,
+				1882132E22AAB81F009909A4 /* GithubApi.swift in Sources */,
 				1882132922AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */,
+				1882133B22AAC3D6009909A4 /* AppError.swift in Sources */,
+				1882133322AAB910009909A4 /* GithubUserModel.swift in Sources */,
 				1882132522AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */,
 				1874F8CE22AA7A5500568013 /* ViewController.swift in Sources */,
 			);
@@ -297,8 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1882133822AABBA0009909A4 /* parseGithubUser.swift in Sources */,
 				1882131E22AA902E009909A4 /* AppDelegate.swift in Sources */,
+				1882132F22AAB81F009909A4 /* GithubApi.swift in Sources */,
 				1882132A22AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */,
+				1882133C22AAC3D6009909A4 /* AppError.swift in Sources */,
+				1882133422AAB910009909A4 /* GithubUserModel.swift in Sources */,
 				1882132622AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */,
 				1874F8E122AA7A5600568013 /* MobileGithubRepoBrowserTests.swift in Sources */,
 			);
@@ -308,8 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1882133922AABBA0009909A4 /* parseGithubUser.swift in Sources */,
 				1882131F22AA902E009909A4 /* AppDelegate.swift in Sources */,
+				1882133022AAB81F009909A4 /* GithubApi.swift in Sources */,
 				1882132B22AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */,
+				1882133D22AAC3D6009909A4 /* AppError.swift in Sources */,
+				1882133522AAB910009909A4 /* GithubUserModel.swift in Sources */,
 				1882132722AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */,
 				1874F8EC22AA7A5600568013 /* MobileGithubRepoBrowserUITests.swift in Sources */,
 			);

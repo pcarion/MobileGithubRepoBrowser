@@ -19,11 +19,18 @@ class GithubUserSelectionViewController: UIViewController {
     
     @IBAction func onSelectGithubUserClick(_ sender: Any) {
         // first we check tht we have an inout for the github user name
-        let githubUserName = self.githubUserName.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        if (githubUserName?.count == 0) {
+        let githubUserName = (self.githubUserName.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        if (githubUserName.count == 0) {
             let alert = UIAlertController(title: "Value is required", message: "You need to enter a Github user name", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+        } else {
+            GithubApi.shared.getUser(userName: githubUserName) { (githubUserModel: GithubUserModel? , errorMessage: String) in
+                print("user model:")
+                print(githubUserModel?.name)
+                print("errorMessage:")
+                print(errorMessage)
+                }
         }
     }
     override func viewDidLoad() {
