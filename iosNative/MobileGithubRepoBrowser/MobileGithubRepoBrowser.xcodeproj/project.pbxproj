@@ -16,6 +16,12 @@
 		1882131D22AA902E009909A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882131C22AA902E009909A4 /* AppDelegate.swift */; };
 		1882131E22AA902E009909A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882131C22AA902E009909A4 /* AppDelegate.swift */; };
 		1882131F22AA902E009909A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882131C22AA902E009909A4 /* AppDelegate.swift */; };
+		1882132522AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882132422AAA311009909A4 /* GithubUserSelectionViewController.swift */; };
+		1882132622AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882132422AAA311009909A4 /* GithubUserSelectionViewController.swift */; };
+		1882132722AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882132422AAA311009909A4 /* GithubUserSelectionViewController.swift */; };
+		1882132922AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882132822AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift */; };
+		1882132A22AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882132822AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift */; };
+		1882132B22AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882132822AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,9 @@
 		1874F8EB22AA7A5600568013 /* MobileGithubRepoBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileGithubRepoBrowserUITests.swift; sourceTree = "<group>"; };
 		1874F8ED22AA7A5600568013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1882131C22AA902E009909A4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1882132222AA957C009909A4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1882132422AAA311009909A4 /* GithubUserSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserSelectionViewController.swift; sourceTree = "<group>"; };
+		1882132822AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GUS-extension+SuggestionTableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +88,7 @@
 		1874F8BF22AA7A5500568013 = {
 			isa = PBXGroup;
 			children = (
+				1882132222AA957C009909A4 /* README.md */,
 				1874F8CA22AA7A5500568013 /* MobileGithubRepoBrowser */,
 				1874F8DF22AA7A5600568013 /* MobileGithubRepoBrowserTests */,
 				1874F8EA22AA7A5600568013 /* MobileGithubRepoBrowserUITests */,
@@ -99,6 +109,7 @@
 		1874F8CA22AA7A5500568013 /* MobileGithubRepoBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				1882132322AAA20B009909A4 /* GithubUserSelection */,
 				1882132022AA9090009909A4 /* SupportingFiles */,
 				1874F8CD22AA7A5500568013 /* ViewController.swift */,
 				1874F8CF22AA7A5500568013 /* Main.storyboard */,
@@ -133,6 +144,15 @@
 				1882131C22AA902E009909A4 /* AppDelegate.swift */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		1882132322AAA20B009909A4 /* GithubUserSelection */ = {
+			isa = PBXGroup;
+			children = (
+				1882132422AAA311009909A4 /* GithubUserSelectionViewController.swift */,
+				1882132822AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift */,
+			);
+			path = GithubUserSelection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1882131D22AA902E009909A4 /* AppDelegate.swift in Sources */,
+				1882132922AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */,
+				1882132522AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */,
 				1874F8CE22AA7A5500568013 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1882131E22AA902E009909A4 /* AppDelegate.swift in Sources */,
+				1882132A22AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */,
+				1882132622AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */,
 				1874F8E122AA7A5600568013 /* MobileGithubRepoBrowserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +309,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1882131F22AA902E009909A4 /* AppDelegate.swift in Sources */,
+				1882132B22AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */,
+				1882132722AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */,
 				1874F8EC22AA7A5600568013 /* MobileGithubRepoBrowserUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
