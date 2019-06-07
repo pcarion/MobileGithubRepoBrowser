@@ -26,11 +26,17 @@ class GithubUserSelectionViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         } else {
             GithubApi.shared.getUser(userName: githubUserName) { (githubUserModel: GithubUserModel? , errorMessage: String) in
-                print("user model:")
-                print(githubUserModel?.name)
-                print("errorMessage:")
-                print(errorMessage)
+//                print("user model:")
+//                print(githubUserModel?.name)
+//                print("errorMessage:")
+//                print(errorMessage)
+                
+                guard let destinationViewController = self.storyboard?.instantiateViewController(withIdentifier: "GithubUserInformationViewController") as? GithubUserInformationViewController else {
+                    print("could not find GithubUserInformationViewController");
+                    return
                 }
+                self.navigationController?.pushViewController(destinationViewController, animated: true)
+            }
         }
     }
     override func viewDidLoad() {
