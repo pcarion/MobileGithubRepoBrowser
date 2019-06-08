@@ -22,3 +22,4 @@
 
 * https://www.youtube.com/watch?v=nfHBCQ3c4Mg (scrollview)
 * https://www.freecodecamp.org/news/how-to-use-auto-layout-with-uiscrollview-for-ios-b94b8687a4cc/ (scrollview)
+* https://medium.com/@luisfmachado/uiscrollview-autolayout-on-a-storyboard-a-step-by-step-guide-15bd67ee79e9

@@ -23,6 +23,9 @@ class GithubUserInformationViewController: UIViewController {
     @IBOutlet weak var followersCountLabel: UILabel!
     @IBOutlet weak var followingCountLabels: UILabel!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,5 +56,33 @@ class GithubUserInformationViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        print("self.scrollView.contentSize (before):")
+        print (String(describing: self.scrollView.contentSize))
+
+        print("self.contentView.bounds:")
+        print (String(describing: self.contentView.bounds))
+        
+        updateContentView();
+        
+        print("self.scrollView.contentSize (after):")
+        print (String(describing: self.scrollView.contentSize))
+        
+
+    }
+    
+    func updateContentView() {
+        let orderedViews = self.contentView.subviews.sorted(by: { $0.frame.maxY < $1.frame.maxY });
+        let subviewsMaxY = orderedViews.last?.frame.maxY
+        print ("orderedViews is \(orderedViews)")
+        print ("subviewsMaxY is \(subviewsMaxY)")
+
+        let height = subviewsMaxY ?? self.scrollView.contentSize.height
+        print ("New Height would be \(height)")
+        self.scrollView.contentSize.height = height;
     }
 }

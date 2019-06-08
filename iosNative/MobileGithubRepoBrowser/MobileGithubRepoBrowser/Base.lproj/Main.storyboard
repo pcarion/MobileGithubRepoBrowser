@@ -284,6 +284,7 @@
                     <connections>
                         <outlet property="bioTextView" destination="vfN-KQ-Jxy" id="BMr-vl-2HD"/>
                         <outlet property="companyLabel" destination="UGV-e2-Vhc" id="nLh-bB-2E5"/>
+                        <outlet property="contentView" destination="gpH-Vy-yCi" id="bdg-ef-Uky"/>
                         <outlet property="emailLabel" destination="pbW-Gz-PVB" id="SDs-Lq-USY"/>
                         <outlet property="followersCountLabel" destination="zO0-UV-G0b" id="bUY-Iu-Z29"/>
                         <outlet property="followingCountLabels" destination="8ce-Wi-nwr" id="wwl-Q3-XTE"/>
@@ -291,6 +292,7 @@
                         <outlet property="locationLabel" destination="eMf-ga-ddr" id="NpU-Pj-OBL"/>
                         <outlet property="nameLabel" destination="MQp-Qb-WXd" id="XVM-Qd-ibi"/>
                         <outlet property="repoCountLabel" destination="4Vn-pi-enT" id="cvE-5l-afM"/>
+                        <outlet property="scrollView" destination="2s9-SP-9U3" id="K7G-AH-417"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmr-hh-E61" userLabel="First Responder" sceneMemberID="firstResponder"/>
