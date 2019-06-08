@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Select Github User-->
+        <!--Github User-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GithubUserSelectionViewController" customModule="MobileGithubRepoBrowser" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohf-ZA-IUw">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="122" width="414" height="740"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WES-T8-Hsl" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="386"/>
@@ -118,7 +118,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Github User" id="iP6-40-XRm"/>
+                    <navigationItem key="navigationItem" title="Github User" prompt="Enter name for:" id="iP6-40-XRm"/>
                     <connections>
                         <outlet property="activityIndicatorView" destination="IYG-1a-t8F" id="H3k-WV-HDL"/>
                         <outlet property="githubUserName" destination="5Tv-JA-Ocf" id="G7T-9d-7GY"/>
@@ -218,11 +218,10 @@
                                                     <constraint firstAttribute="height" constant="210" id="nLq-uS-GIR"/>
                                                 </constraints>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vfN-KQ-Jxy">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vfN-KQ-Jxy">
                                                 <rect key="frame" x="226" y="124" width="180" height="210"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="180" id="fUE-Rh-VJ2"/>
                                                     <constraint firstAttribute="height" constant="210" id="hnJ-nt-cTK"/>
                                                 </constraints>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -295,6 +294,7 @@
                                             <constraint firstItem="vfN-KQ-Jxy" firstAttribute="leading" secondItem="RDU-gH-6Cl" secondAttribute="trailing" constant="8" id="C66-SB-JdF"/>
                                             <constraint firstAttribute="bottom" secondItem="fzY-g9-je7" secondAttribute="bottom" constant="20" id="E1n-IV-dto"/>
                                             <constraint firstItem="ao6-hZ-3bF" firstAttribute="top" secondItem="GTL-F7-mIJ" secondAttribute="bottom" constant="8" id="FMs-Le-jGB"/>
+                                            <constraint firstAttribute="trailing" secondItem="vfN-KQ-Jxy" secondAttribute="trailing" constant="8" id="FfG-Ne-Xx6"/>
                                             <constraint firstItem="DbJ-Dl-7sO" firstAttribute="top" secondItem="gZL-8z-AMT" secondAttribute="bottom" constant="8" id="HOW-6H-6m6"/>
                                             <constraint firstItem="GTL-F7-mIJ" firstAttribute="leading" secondItem="gpH-Vy-yCi" secondAttribute="leading" constant="8" id="J7S-D6-swu"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rqi-Ny-tDk" secondAttribute="trailing" constant="20" symbolic="YES" id="JSt-bf-lau"/>
