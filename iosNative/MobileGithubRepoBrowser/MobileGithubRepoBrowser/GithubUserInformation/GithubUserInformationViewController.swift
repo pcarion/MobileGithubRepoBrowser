@@ -20,6 +20,8 @@ class GithubUserInformationViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var bioTextView: UITextView!
     @IBOutlet weak var repoCountLabel: UILabel!
+    @IBOutlet weak var followersCountLabel: UILabel!
+    @IBOutlet weak var followingCountLabels: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,8 @@ class GithubUserInformationViewController: UIViewController {
             self.companyLabel.text? = user.company
             self.locationLabel.text? = user.location
             self.repoCountLabel.text? = "\(user.publicReposCount)"
+            self.followersCountLabel.text? = "\(user.followersCount)"
+            self.followingCountLabels.text? = "\(user.followingCount)"
             self.bioTextView.text? = user.bio
 
             if let imageUrl = user.avatarUrl {
