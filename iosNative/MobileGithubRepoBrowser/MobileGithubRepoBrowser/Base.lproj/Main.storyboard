@@ -110,9 +110,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ohf-ZA-IUw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Fe-uu-lKL"/>
+                            <constraint firstItem="WES-T8-Hsl" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="INU-wF-FQA"/>
                             <constraint firstItem="WES-T8-Hsl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" priority="250" id="LNS-ul-cKS"/>
                             <constraint firstItem="ohf-ZA-IUw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aGT-Jw-xuc"/>
-                            <constraint firstItem="WES-T8-Hsl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="byf-wt-K2k"/>
                             <constraint firstItem="ohf-ZA-IUw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gnO-3g-3wE"/>
                             <constraint firstItem="ohf-ZA-IUw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hOr-kU-CG7"/>
                         </constraints>
