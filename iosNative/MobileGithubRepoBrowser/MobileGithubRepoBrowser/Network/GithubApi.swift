@@ -12,8 +12,9 @@
 import Foundation
 
 class GithubApi {
-    typealias QueryUserResult = (GithubUserModel?, String) -> ()
-    
+    typealias QueryUserResult = (GithubUserModel?, String?) -> Void
+    typealias QueryDownloadResult = (NSData?, String? ) -> Void
+
     static let shared = GithubApi()
     
     let defaultSession = URLSession(configuration: .default)
@@ -61,6 +62,32 @@ class GithubApi {
             }
         }
         dataTask?.resume()
+    }
+    
+    func download(downloadUrl: String, completion: @escaping QueryDownloadResult)
+    {
+        guard let queryUrl = URL(string: downloadUrl) else {
+            DispatchQueue.main.async {
+                completion(nil, "bad URL: \(downloadUrl)")
+            }
+            return
+        }
+        
+        let request = URLRequest(url:queryUrl)
+        
+        let task = defaultSession.downloadTask(with: request) { (tempLocalUrl, response, error) in
+            
+            if let tempLocalUrl = tempLocalUrl, error == nil {
+                if let statusCode = (response as? HTTPURLResponse)?.statusCode,
+                    statusCode == 200 {
+                    let rawImageData = NSData(contentsOf: tempLocalUrl)
+                    completion(rawImageData!, nil)
+                }
+            } else {
+                completion(nil, "Error downloading file: \(String(describing: error?.localizedDescription))")
+            }
+        }
+        task.resume()
     }
     
     /*

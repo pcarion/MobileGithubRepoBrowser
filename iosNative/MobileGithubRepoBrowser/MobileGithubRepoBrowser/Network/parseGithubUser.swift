@@ -21,7 +21,7 @@ func parseGithubUser(_ data: Data) throws -> GithubUserModel {
         print("JSONSerialization error: \(parseError.localizedDescription)")
         throw AppError.invalidJsonResponse(parseError.localizedDescription)
     }
-    print ("parse: \(response)")
+    print ("parse: \(String(describing: response))")
     
 
     // the top level element is an object describing the user
@@ -37,8 +37,9 @@ func parseGithubUser(_ data: Data) throws -> GithubUserModel {
         let publicReposCount = userDictionary["public_repos"] as? Int ?? 0
         let followersCount = userDictionary["followers"] as? Int ?? 0
         let followingCount = userDictionary["following"] as? Int ?? 0
+        let avatarUrl = userDictionary["avatar_url"] as? String
         
-        return GithubUserModel(name: name, login: login, company: company, location: location, email: email, bio: bio, publicReposCount: publicReposCount, followersCount: followersCount, followingCount: followingCount)
+        return GithubUserModel(name: name, login: login, company: company, location: location, email: email, bio: bio, avatarUrl: avatarUrl, publicReposCount: publicReposCount, followersCount: followersCount, followingCount: followingCount)
     } else {
         throw AppError.badJsonData
     }

@@ -26,7 +26,7 @@ class GithubUserSelectionViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         } else {
-            GithubApi.shared.getUser(userName: githubUserName) { (githubUserModel: GithubUserModel? , errorMessage: String) in
+            GithubApi.shared.getUser(userName: githubUserName) { (githubUserModel: GithubUserModel? , errorMessage: String?) in
 //                print("user model:")
 //                print(githubUserModel?.name)
 //                print("errorMessage:")

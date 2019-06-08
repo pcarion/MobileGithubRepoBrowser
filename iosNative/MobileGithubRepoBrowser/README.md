@@ -20,4 +20,5 @@
 
 * https://www.youtube.com/watch?v=DxCydBmOqXU  (programmatic segue)
 
-
+* https://www.youtube.com/watch?v=nfHBCQ3c4Mg (scrollview)
+* https://www.freecodecamp.org/news/how-to-use-auto-layout-with-uiscrollview-for-ios-b94b8687a4cc/ (scrollview)

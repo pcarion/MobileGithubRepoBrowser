@@ -16,6 +16,7 @@ class GithubUserModel {
     let location: String
     let email: String
     let bio: String
+    let avatarUrl: String?
     let publicReposCount: Int
     let followersCount: Int
     let followingCount: Int
@@ -26,6 +27,7 @@ class GithubUserModel {
         location: String,
         email: String,
         bio: String,
+        avatarUrl: String?,
         publicReposCount: Int,
         followersCount: Int,
         followingCount: Int
@@ -36,6 +38,7 @@ class GithubUserModel {
         self.location = location;
         self.email = email;
         self.bio = bio;
+        self.avatarUrl = avatarUrl;
         self.publicReposCount = publicReposCount;
         self.followersCount = followersCount;
         self.followingCount = followingCount;
