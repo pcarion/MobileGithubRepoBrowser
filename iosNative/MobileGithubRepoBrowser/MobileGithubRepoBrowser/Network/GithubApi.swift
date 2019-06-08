@@ -13,6 +13,7 @@ import Foundation
 
 class GithubApi {
     typealias QueryUserResult = (GithubUserModel?, String?) -> Void
+    typealias QueryReposResult = ([GithubRepository]?, String?) -> Void
     typealias QueryDownloadResult = (NSData?, String? ) -> Void
 
     static let shared = GithubApi()
@@ -49,10 +50,10 @@ class GithubApi {
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
                 do {
-                    let githubUser = try parseGithubUser(data)
+                    let repositories = try parseGithubUser(data)
                     // we pass back, on the UI thread, the result of the query
                     DispatchQueue.main.async {
-                        completion(githubUser, "")
+                        completion(repositories, "")
                     }
                 } catch {
                     DispatchQueue.main.async {
@@ -63,7 +64,47 @@ class GithubApi {
         }
         dataTask?.resume()
     }
-    
+
+    func getReposForUser(userName: String, completion: @escaping QueryReposResult) {
+        guard let queryUrl = URL(string: "https://api.github.com/users/\(userName)/repos") else {
+            // should not happen... but safer anyway
+            DispatchQueue.main.async {
+                completion(nil, "internal error")
+            }
+            return
+        }
+        
+        var request = URLRequest(url:queryUrl)
+        
+        dataTask?.cancel()
+        dataTask = defaultSession.dataTask(with: request) { data, response, error in
+            // cleanup when we're done processing the request
+            defer {
+                self.dataTask = nil
+            }
+            if let error = error {
+                DispatchQueue.main.async {
+                    completion(nil, "DataTask error: \(error.localizedDescription)")
+                }
+            } else if let data = data,
+                let response = response as? HTTPURLResponse,
+                response.statusCode == 200 {
+                do {
+                    let repos = try parseGithubRepos(data)
+                    // we pass back, on the UI thread, the result of the query
+                    DispatchQueue.main.async {
+                        completion(repos, "")
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        completion(nil, error.localizedDescription)
+                    }
+                }
+            }
+        }
+        dataTask?.resume()
+    }
+
     func download(downloadUrl: String, completion: @escaping QueryDownloadResult)
     {
         guard let queryUrl = URL(string: downloadUrl) else {

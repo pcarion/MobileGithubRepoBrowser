@@ -286,7 +286,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Show Repositories"/>
                                                 <connections>
-                                                    <segue destination="sxB-7f-NBq" kind="show" id="UJ9-yL-0y7"/>
+                                                    <segue destination="sxB-7f-NBq" kind="show" identifier="showUserRepos" id="UJ9-yL-0y7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -387,10 +387,10 @@
             </objects>
             <point key="canvasLocation" x="1869.5652173913045" y="101.78571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Github Repos List View Controller-->
         <scene sceneID="E0F-qW-phI">
             <objects>
-                <viewController id="sxB-7f-NBq" sceneMemberID="viewController">
+                <viewController id="sxB-7f-NBq" customClass="GithubReposListViewController" customModule="MobileGithubRepoBrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EEn-Pn-qFY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -41,7 +41,7 @@ class GithubUserSelectionViewController: UIViewController {
                     // dismiss activity indicator
                     self.activityIndicatorView.stopAnimating()
                     self.navigationController?.pushViewController(destinationViewController, animated: true)
-                    // change the back key title - otherwise would use the title of this VC
+                    // could change the back key title - otherwise would use the title of this VC
                     // self.navigationController?.navigationBar.topItem?.title = "back";
                 }
             }

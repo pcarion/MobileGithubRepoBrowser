@@ -37,6 +37,15 @@
 		1882134022AADD94009909A4 /* GithubUserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882133F22AADD94009909A4 /* GithubUserInformationViewController.swift */; };
 		1882134122AADD94009909A4 /* GithubUserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882133F22AADD94009909A4 /* GithubUserInformationViewController.swift */; };
 		1882134222AADD94009909A4 /* GithubUserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882133F22AADD94009909A4 /* GithubUserInformationViewController.swift */; };
+		1882134522AC6B94009909A4 /* GithubReposList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882134422AC6B94009909A4 /* GithubReposList.swift */; };
+		1882134622AC6B94009909A4 /* GithubReposList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882134422AC6B94009909A4 /* GithubReposList.swift */; };
+		1882134722AC6B94009909A4 /* GithubReposList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882134422AC6B94009909A4 /* GithubReposList.swift */; };
+		1882134922AC6F1B009909A4 /* parseGithubRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882134822AC6F1B009909A4 /* parseGithubRepos.swift */; };
+		1882134A22AC6F1B009909A4 /* parseGithubRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882134822AC6F1B009909A4 /* parseGithubRepos.swift */; };
+		1882134B22AC6F1B009909A4 /* parseGithubRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882134822AC6F1B009909A4 /* parseGithubRepos.swift */; };
+		1882134D22AC6FC8009909A4 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882134C22AC6FC8009909A4 /* GithubRepository.swift */; };
+		1882134E22AC6FC8009909A4 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882134C22AC6FC8009909A4 /* GithubRepository.swift */; };
+		1882134F22AC6FC8009909A4 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882134C22AC6FC8009909A4 /* GithubRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +87,9 @@
 		1882133622AABBA0009909A4 /* parseGithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parseGithubUser.swift; sourceTree = "<group>"; };
 		1882133A22AAC3D6009909A4 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		1882133F22AADD94009909A4 /* GithubUserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserInformationViewController.swift; sourceTree = "<group>"; };
+		1882134422AC6B94009909A4 /* GithubReposList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReposList.swift; sourceTree = "<group>"; };
+		1882134822AC6F1B009909A4 /* parseGithubRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parseGithubRepos.swift; sourceTree = "<group>"; };
+		1882134C22AC6FC8009909A4 /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +141,7 @@
 		1874F8CA22AA7A5500568013 /* MobileGithubRepoBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				1882134322AC6B79009909A4 /* GithubReposList */,
 				1882133E22AADD57009909A4 /* GithubUserInformation */,
 				1882133122AAB8EE009909A4 /* Model */,
 				1882132C22AAB7D5009909A4 /* Network */,
@@ -184,6 +197,7 @@
 			children = (
 				1882132D22AAB81F009909A4 /* GithubApi.swift */,
 				1882133622AABBA0009909A4 /* parseGithubUser.swift */,
+				1882134822AC6F1B009909A4 /* parseGithubRepos.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -192,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				1882133222AAB910009909A4 /* GithubUserModel.swift */,
+				1882134C22AC6FC8009909A4 /* GithubRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +217,14 @@
 				1882133F22AADD94009909A4 /* GithubUserInformationViewController.swift */,
 			);
 			path = GithubUserInformation;
+			sourceTree = "<group>";
+		};
+		1882134322AC6B79009909A4 /* GithubReposList */ = {
+			isa = PBXGroup;
+			children = (
+				1882134422AC6B94009909A4 /* GithubReposList.swift */,
+			);
+			path = GithubReposList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,12 +358,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1882134D22AC6FC8009909A4 /* GithubRepository.swift in Sources */,
 				1882134022AADD94009909A4 /* GithubUserInformationViewController.swift in Sources */,
 				1882133722AABBA0009909A4 /* parseGithubUser.swift in Sources */,
 				1882131D22AA902E009909A4 /* AppDelegate.swift in Sources */,
 				1882132E22AAB81F009909A4 /* GithubApi.swift in Sources */,
+				1882134922AC6F1B009909A4 /* parseGithubRepos.swift in Sources */,
 				1882132922AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */,
 				1882133B22AAC3D6009909A4 /* AppError.swift in Sources */,
+				1882134522AC6B94009909A4 /* GithubReposList.swift in Sources */,
 				1882133322AAB910009909A4 /* GithubUserModel.swift in Sources */,
 				1882132522AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */,
 				1874F8CE22AA7A5500568013 /* ViewController.swift in Sources */,
@@ -351,12 +377,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1882134E22AC6FC8009909A4 /* GithubRepository.swift in Sources */,
 				1882134122AADD94009909A4 /* GithubUserInformationViewController.swift in Sources */,
 				1882133822AABBA0009909A4 /* parseGithubUser.swift in Sources */,
 				1882131E22AA902E009909A4 /* AppDelegate.swift in Sources */,
 				1882132F22AAB81F009909A4 /* GithubApi.swift in Sources */,
+				1882134A22AC6F1B009909A4 /* parseGithubRepos.swift in Sources */,
 				1882132A22AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */,
 				1882133C22AAC3D6009909A4 /* AppError.swift in Sources */,
+				1882134622AC6B94009909A4 /* GithubReposList.swift in Sources */,
 				1882133422AAB910009909A4 /* GithubUserModel.swift in Sources */,
 				1882132622AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */,
 				1874F8E122AA7A5600568013 /* MobileGithubRepoBrowserTests.swift in Sources */,
@@ -367,12 +396,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1882134F22AC6FC8009909A4 /* GithubRepository.swift in Sources */,
 				1882134222AADD94009909A4 /* GithubUserInformationViewController.swift in Sources */,
 				1882133922AABBA0009909A4 /* parseGithubUser.swift in Sources */,
 				1882131F22AA902E009909A4 /* AppDelegate.swift in Sources */,
 				1882133022AAB81F009909A4 /* GithubApi.swift in Sources */,
+				1882134B22AC6F1B009909A4 /* parseGithubRepos.swift in Sources */,
 				1882132B22AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */,
 				1882133D22AAC3D6009909A4 /* AppError.swift in Sources */,
+				1882134722AC6B94009909A4 /* GithubReposList.swift in Sources */,
 				1882133522AAB910009909A4 /* GithubUserModel.swift in Sources */,
 				1882132722AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */,
 				1874F8EC22AA7A5600568013 /* MobileGithubRepoBrowserUITests.swift in Sources */,
