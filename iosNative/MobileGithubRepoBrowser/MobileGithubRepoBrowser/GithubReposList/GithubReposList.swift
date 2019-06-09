@@ -12,6 +12,7 @@ import UIKit
 class GithubReposListViewController: UIViewController {
     var githubUser: GithubUserModel?
     var repositories = [GithubRepository]()
+    var selectedRepo: GithubRepository?
     
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
@@ -22,8 +23,6 @@ class GithubReposListViewController: UIViewController {
         // Additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
-        // to ensure that dequeueReusableCellWithIdentifier will return a default TableViewCell
-        // tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
         if let user = self.githubUser {
             self.title = user.login
@@ -53,4 +52,15 @@ class GithubReposListViewController: UIViewController {
              activityIndicatorView.startAnimating()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRepoDetails" {
+            if let vc = sender as? GithubReposListViewController {
+                let controller = segue.destination as! GithubRepoDetailController
+                let repository = vc.selectedRepo
+                controller.githubRepo = repository
+            }
+        }
+    }
+
 }

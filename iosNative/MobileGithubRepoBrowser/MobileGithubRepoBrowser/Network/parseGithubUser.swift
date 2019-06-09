@@ -21,7 +21,7 @@ func parseGithubUser(_ data: Data) throws -> GithubUserModel {
         print("JSONSerialization error: \(parseError.localizedDescription)")
         throw AppError.invalidJsonResponse(parseError.localizedDescription)
     }
-    print ("parse: \(String(describing: response))")
+    // print ("parse: \(String(describing: response))")
     
 
     // the top level element is an object describing the user

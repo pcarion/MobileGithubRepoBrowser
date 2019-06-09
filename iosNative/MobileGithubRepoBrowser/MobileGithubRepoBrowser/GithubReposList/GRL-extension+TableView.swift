@@ -33,6 +33,14 @@ extension GithubReposListViewController : UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        // we update the property containing the selectd repo so
+        // that we can then retrieve when performing the segue transition
+        let repository = self.repositories[indexPath.row] as GithubRepository
+        self.selectedRepo = repository
+
+        // showRepoDetails
+        performSegue(withIdentifier: "showRepoDetails", sender: self)
     }
     
 }
