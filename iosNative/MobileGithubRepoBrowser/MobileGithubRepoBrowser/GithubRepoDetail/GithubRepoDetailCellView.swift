@@ -21,7 +21,7 @@ class GithubRepoDetailCellView: UICollectionViewCell {
     }
     var text: String! {
         didSet {
-            textView.text = title
+            textView.text = text
         }
     }
 }

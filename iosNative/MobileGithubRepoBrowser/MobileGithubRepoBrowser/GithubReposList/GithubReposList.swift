@@ -56,7 +56,6 @@ class GithubReposListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showRepoDetails" {
             if let vc = sender as? GithubReposListViewController {
-                print ("@@ segue.destination: \(String(describing: segue.destination))")
                 let controller = segue.destination as! GithubRepoDetailController
                 let repository = vc.selectedRepo
                 controller.githubRepo = repository

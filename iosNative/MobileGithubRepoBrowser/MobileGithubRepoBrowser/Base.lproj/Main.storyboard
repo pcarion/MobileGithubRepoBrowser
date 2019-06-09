@@ -399,7 +399,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7Yf-zj-mKR">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7Yf-zj-mKR">
                                 <rect key="frame" x="0.0" y="438" width="414" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -407,10 +407,11 @@
                         <constraints>
                             <constraint firstItem="3Nc-q8-TGi" firstAttribute="trailing" secondItem="LVf-fM-jgZ" secondAttribute="trailing" id="11S-ww-Y74"/>
                             <constraint firstAttribute="bottom" secondItem="3Nc-q8-TGi" secondAttribute="bottom" id="8AZ-AU-QcY"/>
-                            <constraint firstItem="7Yf-zj-mKR" firstAttribute="centerX" secondItem="LVf-fM-jgZ" secondAttribute="centerX" id="PmR-zc-02k"/>
-                            <constraint firstItem="7Yf-zj-mKR" firstAttribute="centerY" secondItem="LVf-fM-jgZ" secondAttribute="centerY" id="YfM-Pm-8NM"/>
+                            <constraint firstItem="7Yf-zj-mKR" firstAttribute="centerY" secondItem="EEn-Pn-qFY" secondAttribute="centerY" id="HcX-H9-oFc"/>
                             <constraint firstItem="3Nc-q8-TGi" firstAttribute="leading" secondItem="LVf-fM-jgZ" secondAttribute="leading" id="gW9-BU-oQN"/>
+                            <constraint firstItem="7Yf-zj-mKR" firstAttribute="leading" secondItem="3Nc-q8-TGi" secondAttribute="leading" id="kQo-rI-Yk6"/>
                             <constraint firstItem="3Nc-q8-TGi" firstAttribute="top" secondItem="LVf-fM-jgZ" secondAttribute="top" id="tR8-00-LSu"/>
+                            <constraint firstItem="7Yf-zj-mKR" firstAttribute="trailing" secondItem="3Nc-q8-TGi" secondAttribute="trailing" id="znm-Iv-Mux"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LVf-fM-jgZ"/>
                     </view>
@@ -433,21 +434,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cnv-2P-rq0">
-                            <size key="itemSize" width="200" height="200"/>
+                            <size key="itemSize" width="200" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="8rY-Ca-M0D" customClass="GithubRepoDetailCellView" customModule="MobileGithubRepoBrowser" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sne-og-Kvh">
                                             <rect key="frame" x="16" y="60" width="168" height="21"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="2DC-Uw-6tL"/>
                                             </constraints>
@@ -456,7 +458,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ek3-IV-zDa">
-                                            <rect key="frame" x="8" y="89" width="184" height="103"/>
+                                            <rect key="frame" x="8" y="89" width="192" height="11"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -465,10 +467,10 @@
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="Ek3-IV-zDa" firstAttribute="top" secondItem="sne-og-Kvh" secondAttribute="bottom" constant="8" id="1GP-oB-AGt"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="sne-og-Kvh" secondAttribute="trailing" constant="8" id="5E8-GQ-JI2"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ek3-IV-zDa" secondAttribute="trailing" constant="8" id="Dd3-zD-bwZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ek3-IV-zDa" secondAttribute="bottom" constant="8" id="Dnb-I4-i6B"/>
-                                    <constraint firstItem="Ek3-IV-zDa" firstAttribute="top" secondItem="sne-og-Kvh" secondAttribute="bottom" constant="8" id="SbI-Jw-2t8"/>
+                                    <constraint firstItem="Ek3-IV-zDa" firstAttribute="bottom" secondItem="8rY-Ca-M0D" secondAttribute="bottomMargin" constant="8" id="c5Y-Vs-0Q8"/>
+                                    <constraint firstItem="Ek3-IV-zDa" firstAttribute="trailing" secondItem="8rY-Ca-M0D" secondAttribute="trailingMargin" constant="8" id="gas-1L-NW3"/>
                                     <constraint firstItem="sne-og-Kvh" firstAttribute="top" secondItem="8rY-Ca-M0D" secondAttribute="topMargin" constant="8" id="iWw-F2-e1e"/>
                                     <constraint firstItem="sne-og-Kvh" firstAttribute="leading" secondItem="8rY-Ca-M0D" secondAttribute="leadingMargin" constant="8" id="pAT-VB-Qk6"/>
                                     <constraint firstItem="Ek3-IV-zDa" firstAttribute="leading" secondItem="8rY-Ca-M0D" secondAttribute="leading" constant="8" id="svd-wb-ZhS"/>

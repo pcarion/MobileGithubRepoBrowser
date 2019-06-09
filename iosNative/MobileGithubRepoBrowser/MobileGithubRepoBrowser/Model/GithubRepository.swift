@@ -8,28 +8,46 @@
 
 import Foundation
 
+struct GithubRepoProperty {
+    var name: String
+    var value: String
+}
+
 class GithubRepository {
     
     let name: String
-    let description: String
-    let starsCount: Int
-    let forksCount: Int
-    let openIssuesCount: Int
-    let watchersCount: Int
+    var props:[GithubRepoProperty]
     
-    init(name: String,
-         description: String,
-         starsCount: Int,
-         forksCount: Int,
-         openIssuesCount: Int,
-         watchersCount: Int
-        ) {
-        self.name = name
-        self.description = description
-        self.starsCount = starsCount
-        self.forksCount = forksCount
-        self.openIssuesCount = openIssuesCount
-        self.watchersCount = watchersCount
+    init(name: String) {
+        self.name = name;
+        self.props = [];
+        addProp(name: "name", value: name)
+    }
+    
+    func addProp(name: String, value: Any?) {
+        guard let value = value else {
+            return
+        }
+        if let value = value as? String {
+            props.append(GithubRepoProperty(name: name, value: value))
+            return
+        }
+        if let value = value as? Int {
+            props.append(GithubRepoProperty(name: name, value: String(value)))
+            return
+        }
+        if let value = value as? Bool {
+            props.append(GithubRepoProperty(name: name, value: String(value)))
+            return
+        }
+        props.append(GithubRepoProperty(name: name, value: "_"))
+    }
+    
+    func value(propName: String) -> String {
+        if let found = props.first(where: { $0.name == propName }) {
+            return found.value
+        }
+        return "?"
     }
     
 }

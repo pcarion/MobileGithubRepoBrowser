@@ -25,7 +25,7 @@ extension GithubReposListViewController : UITableViewDelegate, UITableViewDataSo
         }
         if let cell = cell {
             cell.textLabel?.text = self.repositories[indexPath.row].name
-            cell.detailTextLabel?.text = self.repositories[indexPath.row].description
+            cell.detailTextLabel?.text = self.repositories[indexPath.row].value(propName: "description")
             cell.accessoryType = .disclosureIndicator
         }
         return cell!
