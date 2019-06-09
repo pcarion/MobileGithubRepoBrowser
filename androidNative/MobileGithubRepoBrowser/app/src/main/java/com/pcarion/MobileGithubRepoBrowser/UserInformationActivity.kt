@@ -49,6 +49,7 @@ class UserInformationActivity : AppCompatActivity(), AnkoLogger {
                 labelFollowings.setText(userEntity.following.toString())
                 Picasso.get()
                     .load(userEntity.avatar_url)
+                    .placeholder(R.drawable.placeholder)
                     .into(imageAvatar);
             }
         }
