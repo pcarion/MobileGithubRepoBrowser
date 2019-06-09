@@ -56,7 +56,8 @@ class MainActivity : AppCompatActivity() {
         selectButton.setOnClickListener {
             // your code to perform when the user clicks on the button
             val intent = Intent(this, UserInformationActivity::class.java)
-            startActivity(intent);
+            intent.putExtra("userName", inputUserName.text.toString())
+            startActivity(intent)
         }
     }
 }
