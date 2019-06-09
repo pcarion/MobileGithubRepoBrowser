@@ -1,3 +1,11 @@
+# MobileGithubRepoBrowser / ios native
+sample app to browse a Github repo, in ios Native with Swift
+
+| iPhone        | iPad |
+| ------------- |-------- |
+| ![Browser App on iPhone](https://raw.githubusercontent.com/pcarion/MobileGithubRepoBrowser/master/iosNative/MobileGithubRepoBrowser/docs/ios-demo.gif) | ![Browser App on iPad](https://raw.githubusercontent.com/pcarion/MobileGithubRepoBrowser/master/iosNative/MobileGithubRepoBrowser/docs/android-demo.gif) |
+
+
 # Development notes
 
 ## Implementation details
