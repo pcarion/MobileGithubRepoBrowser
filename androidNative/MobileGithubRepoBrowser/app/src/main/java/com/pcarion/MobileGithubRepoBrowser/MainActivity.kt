@@ -1,5 +1,6 @@
 package com.pcarion.MobileGithubRepoBrowser
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
@@ -54,6 +55,8 @@ class MainActivity : AppCompatActivity() {
 
         selectButton.setOnClickListener {
             // your code to perform when the user clicks on the button
+            val intent = Intent(this, UserInformationActivity::class.java)
+            startActivity(intent);
         }
     }
 }
