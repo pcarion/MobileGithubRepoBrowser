@@ -14,15 +14,6 @@ import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
-//import android.R
-//import androidx.core.view.ViewCompat.setAlpha
-//import androidx.core.view.ViewCompat.animate
-//import android.widget.AdapterView
-
-
-
-
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

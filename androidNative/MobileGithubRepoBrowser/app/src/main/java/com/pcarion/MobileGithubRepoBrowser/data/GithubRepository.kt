@@ -1,4 +1,6 @@
-data class GithubReposList(
+package com.pcarion.MobileGithubRepoBrowser.data
+
+data class GithubRepository(
     val `private`: Boolean,
     val archive_url: String,
     val archived: Boolean,
