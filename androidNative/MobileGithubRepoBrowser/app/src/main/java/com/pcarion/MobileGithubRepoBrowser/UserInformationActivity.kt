@@ -42,6 +42,9 @@ class UserInformationActivity : AppCompatActivity(), AnkoLogger {
                 labelCompany.setText(userEntity.company)
                 labelLocation.setText(userEntity.location)
                 labelBio.setText(userEntity.bio)
+                labelPublicRepos.setText(userEntity.public_repos.toString())
+                labelFollowers.setText(userEntity.followers.toString())
+                labelFollowings.setText(userEntity.following.toString())
                 Picasso.get()
                     .load(userEntity.avatar_url)
                     .into(imageAvatar);
