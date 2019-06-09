@@ -15,5 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        actionBar?.title = "Github User"
+        supportActionBar?.title = "Github User"
     }
 }
