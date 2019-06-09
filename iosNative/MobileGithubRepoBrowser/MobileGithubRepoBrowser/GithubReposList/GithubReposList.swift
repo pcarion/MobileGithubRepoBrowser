@@ -31,16 +31,12 @@ class GithubReposListViewController: UIViewController {
              GithubApi.shared.getReposForUser(userName: user.login) {
                 (repositories: [GithubRepository]? , errorMessage: String?) in
                 if let repositories = repositories {
-                    print("repos: \(repositories)");
                     self.repositories.removeAll()
 
                     // we repopulate the table - each element keeps the same
                     // position it had in the network call result
                     for (index, repo) in repositories.enumerated() {
-                        print ("inserting repo: \(repo) at \(index)")
                         self.repositories.insert(repo, at: index)
-//                        let indexPath = IndexPath(row: index, section: 0)
-//                        self.tableView.insertRows(at: [indexPath], with: .automatic)
                     }
                     // dismiss activity indicator
                     self.activityIndicatorView.stopAnimating()

@@ -21,10 +21,8 @@ func parseGithubRepos(_ data: Data) throws -> [GithubRepository] {
     
     // the top level element is an array of repos description
     if let array = response as? [Any] {
-        print ("@@ array: \(array)");
         // we parse all the items in the arrat
         for object in array {
-            print ("@@ object: \(object)");
             // retrieve each element as a dictionary and we grab the properties
             // we are interested in
             if let repoDictionary = object as? [String: Any] {
