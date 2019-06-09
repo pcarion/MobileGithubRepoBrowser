@@ -72,6 +72,7 @@ class GithubUserInformationViewController: UIViewController {
 //        updateContentView();
 }
     
+    // not used - see above
     func updateContentView() {
         let orderedViews = self.contentView.subviews.sorted(by: { $0.frame.maxY < $1.frame.maxY });
         let subviewsMaxY = orderedViews.last?.frame.maxY

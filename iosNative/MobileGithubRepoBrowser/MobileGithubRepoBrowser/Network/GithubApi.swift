@@ -132,49 +132,5 @@ class GithubApi {
         }
         task.resume()
     }
-    
-    /*
-    // parse the JSOn ersponse from the get repos call
-    func parseResponse(_ data: Data) {
-        var response: Any?
-        repos.removeAll()
-        
-        // JSON parsing
-        do {
-            response = try JSONSerialization.jsonObject(with: data, options: [])
-        } catch let parseError as NSError {
-            errorMessage += "JSONSerialization error: \(parseError.localizedDescription)\n"
-            return
-        }
-        
-        // the top level element is an array of repos description
-        if let array = response as? [Any] {
-            // we parse all the items in the arrat
-            for object in array {
-                // retrieve each element as a dictionary and we grab the properties
-                // we are interested in
-                if let repoDictionary = object as? [String: Any],
-                    let name = repoDictionary["name"] as? String,
-                    let starsCount = repoDictionary["stargazers_count"] as? Int,
-                    let watchersCount = repoDictionary["watchers_count"] as? Int,
-                    let forksCount = repoDictionary["forks_count"] as? Int,
-                    let openIssuesCount = repoDictionary["open_issues_count"] as? Int,
-                    let description = repoDictionary["description"] as? String {
-                    repos.append(Repo(name: name,
-                                      description: description,
-                                      starsCount: starsCount,
-                                      forksCount: forksCount,
-                                      openIssuesCount: openIssuesCount,
-                                      watchersCount: watchersCount))
-                    print ("Repo: \(name) : \(description) - \(starsCount)")
-                } else {
-                    errorMessage += "Problem parsing trackDictionary\n"
-                }
-            }
-            
-        }
-        //        print(response!)
-    }
- */
 }
 
