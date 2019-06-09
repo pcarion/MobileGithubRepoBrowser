@@ -8,6 +8,7 @@ import android.widget.Toast
 import android.os.AsyncTask
 import com.google.gson.Gson
 import com.pcarion.MobileGithubRepoBrowser.data.GithubUser
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.content_user_information.*
 import org.jetbrains.anko.*
 import java.net.URL
@@ -30,14 +31,20 @@ class UserInformationActivity : AppCompatActivity(), AnkoLogger {
             //Execute all the lon running tasks here
             val jsonData: String = URL("https://api.github.com/users/$userName").readText()
             info("retrieveUserInformation>" + jsonData)
+            info("imageAvatar>" + imageAvatar)
+            var gson = Gson()
+            var userEntity = gson.fromJson(jsonData, GithubUser::class.java)
+
             uiThread {
-                var gson = Gson()
-                var userEntity = gson?.fromJson(jsonData, GithubUser::class.java)
                 //Update the UI thread here
                 labelName.setText(userEntity.name)
                 labelEmail.setText(userEntity.email)
                 labelCompany.setText(userEntity.company)
                 labelLocation.setText(userEntity.location)
+                labelBio.setText(userEntity.bio)
+                Picasso.get()
+                    .load(userEntity.avatar_url)
+                    .into(imageAvatar);
             }
         }
     }

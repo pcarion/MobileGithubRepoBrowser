@@ -83,5 +83,30 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/labelCompany"/>
 
+        <ImageView
+                android:id="@+id/imageAvatar"
+                android:layout_width="210dp"
+                android:layout_height="210dp"
+                android:scaleType="fitCenter"
+                android:layout_margin="8dp"
+                android:src="@drawable/placeholder"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelLocation"
+                app:layout_constraintRight_toLeftOf="@+id/labelBio"
+                app:layout_constraintHorizontal_chainStyle="spread"/>
+
+        <TextView
+                android:id="@+id/labelBio"
+                android:layout_width="0dp"
+                android:layout_height="210dp"
+                android:padding="8dp"
+                android:text=""
+                android:scrollHorizontally="false"
+                android:ellipsize="none"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/imageAvatar"
+                app:layout_constraintTop_toBottomOf="@+id/labelLocation"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

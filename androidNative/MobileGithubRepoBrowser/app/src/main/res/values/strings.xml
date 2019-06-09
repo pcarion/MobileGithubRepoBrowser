@@ -3,6 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_user_information">Github User Information</string>
     <string name="large_text">
-        "Material is the metaphor."
+        ""
     </string>
 </resources>
