@@ -417,7 +417,7 @@
                     <connections>
                         <outlet property="activityIndicatorView" destination="7Yf-zj-mKR" id="uTh-8G-N4i"/>
                         <outlet property="tableView" destination="3Nc-q8-TGi" id="0lo-cu-3cB"/>
-                        <segue destination="QGS-Xq-kCk" kind="show" identifier="showRepoDetails" id="E99-O9-lOK"/>
+                        <segue destination="gN6-d5-ORx" kind="show" identifier="showRepoDetails" id="4hc-IT-yZN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDH-LL-npt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -425,19 +425,69 @@
             <point key="canvasLocation" x="2757.971014492754" y="104.46428571428571"/>
         </scene>
         <!--Github Repo Detail Controller-->
-        <scene sceneID="rVZ-hc-6J4">
+        <scene sceneID="zyi-qs-bpG">
             <objects>
-                <viewController id="QGS-Xq-kCk" customClass="GithubRepoDetailController" customModule="MobileGithubRepoBrowser" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="elk-u9-zVf">
+                <collectionViewController id="gN6-d5-ORx" customClass="GithubRepoDetailController" customModule="MobileGithubRepoBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Eoe-cg-fJr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Co0-g7-Vdm"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XxQ-ZB-waT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cnv-2P-rq0">
+                            <size key="itemSize" width="200" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="8rY-Ca-M0D" customClass="GithubRepoDetailCellView" customModule="MobileGithubRepoBrowser" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sne-og-Kvh">
+                                            <rect key="frame" x="16" y="60" width="168" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="2DC-Uw-6tL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ek3-IV-zDa">
+                                            <rect key="frame" x="8" y="89" width="184" height="103"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="sne-og-Kvh" secondAttribute="trailing" constant="8" id="5E8-GQ-JI2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ek3-IV-zDa" secondAttribute="trailing" constant="8" id="Dd3-zD-bwZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ek3-IV-zDa" secondAttribute="bottom" constant="8" id="Dnb-I4-i6B"/>
+                                    <constraint firstItem="Ek3-IV-zDa" firstAttribute="top" secondItem="sne-og-Kvh" secondAttribute="bottom" constant="8" id="SbI-Jw-2t8"/>
+                                    <constraint firstItem="sne-og-Kvh" firstAttribute="top" secondItem="8rY-Ca-M0D" secondAttribute="topMargin" constant="8" id="iWw-F2-e1e"/>
+                                    <constraint firstItem="sne-og-Kvh" firstAttribute="leading" secondItem="8rY-Ca-M0D" secondAttribute="leadingMargin" constant="8" id="pAT-VB-Qk6"/>
+                                    <constraint firstItem="Ek3-IV-zDa" firstAttribute="leading" secondItem="8rY-Ca-M0D" secondAttribute="leading" constant="8" id="svd-wb-ZhS"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="textView" destination="Ek3-IV-zDa" id="swE-iT-oFA"/>
+                                    <outlet property="titleLabel" destination="sne-og-Kvh" id="ChB-Q0-CDU"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="gN6-d5-ORx" id="8Kb-BA-2rE"/>
+                            <outlet property="delegate" destination="gN6-d5-ORx" id="q4l-d6-ghT"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Pa-5S-6C4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3653" y="109"/>
+            <point key="canvasLocation" x="3933" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GhG-uK-pfm">

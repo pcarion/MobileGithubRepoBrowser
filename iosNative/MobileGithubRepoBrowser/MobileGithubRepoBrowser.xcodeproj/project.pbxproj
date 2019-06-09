@@ -52,6 +52,9 @@
 		1882135622AC88EC009909A4 /* GithubRepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882135522AC88EC009909A4 /* GithubRepoDetailViewController.swift */; };
 		1882135722AC88EC009909A4 /* GithubRepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882135522AC88EC009909A4 /* GithubRepoDetailViewController.swift */; };
 		1882135822AC88EC009909A4 /* GithubRepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882135522AC88EC009909A4 /* GithubRepoDetailViewController.swift */; };
+		1882135A22AC974E009909A4 /* GithubRepoDetailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882135922AC974E009909A4 /* GithubRepoDetailCellView.swift */; };
+		1882135B22AC974E009909A4 /* GithubRepoDetailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882135922AC974E009909A4 /* GithubRepoDetailCellView.swift */; };
+		1882135C22AC974E009909A4 /* GithubRepoDetailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882135922AC974E009909A4 /* GithubRepoDetailCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,7 @@
 		1882134C22AC6FC8009909A4 /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
 		1882135022AC7515009909A4 /* GRL-extension+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GRL-extension+TableView.swift"; sourceTree = "<group>"; };
 		1882135522AC88EC009909A4 /* GithubRepoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoDetailViewController.swift; sourceTree = "<group>"; };
+		1882135922AC974E009909A4 /* GithubRepoDetailCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoDetailCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				1882135522AC88EC009909A4 /* GithubRepoDetailViewController.swift */,
+				1882135922AC974E009909A4 /* GithubRepoDetailCellView.swift */,
 			);
 			path = GithubRepoDetail;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 				1882133B22AAC3D6009909A4 /* AppError.swift in Sources */,
 				1882134522AC6B94009909A4 /* GithubReposList.swift in Sources */,
 				1882133322AAB910009909A4 /* GithubUserModel.swift in Sources */,
+				1882135A22AC974E009909A4 /* GithubRepoDetailCellView.swift in Sources */,
 				1882132522AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */,
 				1874F8CE22AA7A5500568013 /* ViewController.swift in Sources */,
 			);
@@ -409,6 +415,7 @@
 				1882133C22AAC3D6009909A4 /* AppError.swift in Sources */,
 				1882134622AC6B94009909A4 /* GithubReposList.swift in Sources */,
 				1882133422AAB910009909A4 /* GithubUserModel.swift in Sources */,
+				1882135B22AC974E009909A4 /* GithubRepoDetailCellView.swift in Sources */,
 				1882132622AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */,
 				1874F8E122AA7A5600568013 /* MobileGithubRepoBrowserTests.swift in Sources */,
 			);
@@ -430,6 +437,7 @@
 				1882133D22AAC3D6009909A4 /* AppError.swift in Sources */,
 				1882134722AC6B94009909A4 /* GithubReposList.swift in Sources */,
 				1882133522AAB910009909A4 /* GithubUserModel.swift in Sources */,
+				1882135C22AC974E009909A4 /* GithubRepoDetailCellView.swift in Sources */,
 				1882132722AAA311009909A4 /* GithubUserSelectionViewController.swift in Sources */,
 				1874F8EC22AA7A5600568013 /* MobileGithubRepoBrowserUITests.swift in Sources */,
 			);
