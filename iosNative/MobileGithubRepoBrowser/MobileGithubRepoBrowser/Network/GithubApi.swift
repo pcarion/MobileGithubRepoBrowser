@@ -53,7 +53,7 @@ class GithubApi {
                     let repositories = try parseGithubUser(data)
                     // we pass back, on the UI thread, the result of the query
                     DispatchQueue.main.async {
-                        completion(repositories, "")
+                        completion(repositories, nil)
                     }
                 } catch {
                     DispatchQueue.main.async {
@@ -73,7 +73,7 @@ class GithubApi {
             }
             return
         }
-        
+        print ("Query API with: \(queryUrl)")
         var request = URLRequest(url:queryUrl)
         
         dataTask?.cancel()
@@ -90,12 +90,14 @@ class GithubApi {
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
                 do {
+                    print ("response is: \(data)")
                     let repos = try parseGithubRepos(data)
                     // we pass back, on the UI thread, the result of the query
                     DispatchQueue.main.async {
-                        completion(repos, "")
+                        completion(repos, nil)
                     }
                 } catch {
+                    print ("error - \(error.localizedDescription)")
                     DispatchQueue.main.async {
                         completion(nil, error.localizedDescription)
                     }

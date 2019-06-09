@@ -46,6 +46,9 @@
 		1882134D22AC6FC8009909A4 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882134C22AC6FC8009909A4 /* GithubRepository.swift */; };
 		1882134E22AC6FC8009909A4 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882134C22AC6FC8009909A4 /* GithubRepository.swift */; };
 		1882134F22AC6FC8009909A4 /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882134C22AC6FC8009909A4 /* GithubRepository.swift */; };
+		1882135122AC7515009909A4 /* GRL-extension+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882135022AC7515009909A4 /* GRL-extension+TableView.swift */; };
+		1882135222AC7515009909A4 /* GRL-extension+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882135022AC7515009909A4 /* GRL-extension+TableView.swift */; };
+		1882135322AC7515009909A4 /* GRL-extension+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882135022AC7515009909A4 /* GRL-extension+TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,7 @@
 		1882134422AC6B94009909A4 /* GithubReposList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReposList.swift; sourceTree = "<group>"; };
 		1882134822AC6F1B009909A4 /* parseGithubRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parseGithubRepos.swift; sourceTree = "<group>"; };
 		1882134C22AC6FC8009909A4 /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
+		1882135022AC7515009909A4 /* GRL-extension+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GRL-extension+TableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				1882134422AC6B94009909A4 /* GithubReposList.swift */,
+				1882135022AC7515009909A4 /* GRL-extension+TableView.swift */,
 			);
 			path = GithubReposList;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				1882132E22AAB81F009909A4 /* GithubApi.swift in Sources */,
 				1882134922AC6F1B009909A4 /* parseGithubRepos.swift in Sources */,
 				1882132922AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */,
+				1882135122AC7515009909A4 /* GRL-extension+TableView.swift in Sources */,
 				1882133B22AAC3D6009909A4 /* AppError.swift in Sources */,
 				1882134522AC6B94009909A4 /* GithubReposList.swift in Sources */,
 				1882133322AAB910009909A4 /* GithubUserModel.swift in Sources */,
@@ -384,6 +390,7 @@
 				1882132F22AAB81F009909A4 /* GithubApi.swift in Sources */,
 				1882134A22AC6F1B009909A4 /* parseGithubRepos.swift in Sources */,
 				1882132A22AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */,
+				1882135222AC7515009909A4 /* GRL-extension+TableView.swift in Sources */,
 				1882133C22AAC3D6009909A4 /* AppError.swift in Sources */,
 				1882134622AC6B94009909A4 /* GithubReposList.swift in Sources */,
 				1882133422AAB910009909A4 /* GithubUserModel.swift in Sources */,
@@ -403,6 +410,7 @@
 				1882133022AAB81F009909A4 /* GithubApi.swift in Sources */,
 				1882134B22AC6F1B009909A4 /* parseGithubRepos.swift in Sources */,
 				1882132B22AAA5E6009909A4 /* GUS-extension+SuggestionTableView.swift in Sources */,
+				1882135322AC7515009909A4 /* GRL-extension+TableView.swift in Sources */,
 				1882133D22AAC3D6009909A4 /* AppError.swift in Sources */,
 				1882134722AC6B94009909A4 /* GithubReposList.swift in Sources */,
 				1882133522AAB910009909A4 /* GithubUserModel.swift in Sources */,

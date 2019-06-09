@@ -21,23 +21,25 @@ func parseGithubRepos(_ data: Data) throws -> [GithubRepository] {
     
     // the top level element is an array of repos description
     if let array = response as? [Any] {
+        print ("@@ array: \(array)");
         // we parse all the items in the arrat
         for object in array {
+            print ("@@ object: \(object)");
             // retrieve each element as a dictionary and we grab the properties
             // we are interested in
-            if let repoDictionary = object as? [String: Any],
-                let name = repoDictionary["name"] as? String,
-                let starsCount = repoDictionary["stargazers_count"] as? Int,
-                let watchersCount = repoDictionary["watchers_count"] as? Int,
-                let forksCount = repoDictionary["forks_count"] as? Int,
-                let openIssuesCount = repoDictionary["open_issues_count"] as? Int,
-                let description = repoDictionary["description"] as? String {
+            if let repoDictionary = object as? [String: Any] {
+                let name = repoDictionary["name"] as? String ?? ""
+                let starsCount = repoDictionary["stargazers_count"] as? Int ?? -1
+                let watchersCount = repoDictionary["watchers_count"] as? Int ?? -1
+                let forksCount = repoDictionary["forks_count"] as? Int ?? -1
+                let openIssuesCount = repoDictionary["open_issues_count"] as? Int ?? -1
+                let description = repoDictionary["description"]  as? String ?? ""
                 repos.append(GithubRepository(name: name,
-                                  description: description,
-                                  starsCount: starsCount,
-                                  forksCount: forksCount,
-                                  openIssuesCount: openIssuesCount,
-                                  watchersCount: watchersCount))
+                                              description: description,
+                                              starsCount: starsCount,
+                                              forksCount: forksCount,
+                                              openIssuesCount: openIssuesCount,
+                                              watchersCount: watchersCount))
             } else {
                 throw AppError.badJsonData
             }

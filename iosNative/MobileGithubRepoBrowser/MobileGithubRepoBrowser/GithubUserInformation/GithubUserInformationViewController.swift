@@ -45,7 +45,6 @@ class GithubUserInformationViewController: UIViewController {
                     if let imageData = imageData {
                         DispatchQueue.main.async {
                             
-                            // #3 - Animate the appearance of the Messier image.
                             UIView.animate(withDuration: 1.0, animations: {
                                 self.imageView.alpha = 1.0
                                 self.imageView?.image = UIImage(data: imageData as Data)

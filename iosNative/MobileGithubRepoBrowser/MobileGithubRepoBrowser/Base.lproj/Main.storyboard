@@ -395,6 +395,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7Yf-zj-mKR">
+                                <rect key="frame" x="0.0" y="438" width="414" height="20"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Nc-q8-TGi">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -404,11 +407,17 @@
                         <constraints>
                             <constraint firstItem="3Nc-q8-TGi" firstAttribute="trailing" secondItem="LVf-fM-jgZ" secondAttribute="trailing" id="11S-ww-Y74"/>
                             <constraint firstAttribute="bottom" secondItem="3Nc-q8-TGi" secondAttribute="bottom" id="8AZ-AU-QcY"/>
+                            <constraint firstItem="7Yf-zj-mKR" firstAttribute="centerX" secondItem="LVf-fM-jgZ" secondAttribute="centerX" id="PmR-zc-02k"/>
+                            <constraint firstItem="7Yf-zj-mKR" firstAttribute="centerY" secondItem="LVf-fM-jgZ" secondAttribute="centerY" id="YfM-Pm-8NM"/>
                             <constraint firstItem="3Nc-q8-TGi" firstAttribute="leading" secondItem="LVf-fM-jgZ" secondAttribute="leading" id="gW9-BU-oQN"/>
                             <constraint firstItem="3Nc-q8-TGi" firstAttribute="top" secondItem="LVf-fM-jgZ" secondAttribute="top" id="tR8-00-LSu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LVf-fM-jgZ"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="7Yf-zj-mKR" id="uTh-8G-N4i"/>
+                        <outlet property="tableView" destination="3Nc-q8-TGi" id="0lo-cu-3cB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDH-LL-npt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
