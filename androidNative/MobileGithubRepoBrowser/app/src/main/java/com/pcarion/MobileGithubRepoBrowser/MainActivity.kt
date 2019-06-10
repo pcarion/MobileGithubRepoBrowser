@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.title = "Github User"
 
         val listItems = arrayOf(
+            "walmartlabs",
             "intuit",
             "facebook",
             "pcarion"

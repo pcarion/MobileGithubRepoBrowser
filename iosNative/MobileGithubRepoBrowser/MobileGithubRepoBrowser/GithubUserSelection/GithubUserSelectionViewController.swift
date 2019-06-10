@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 class GithubUserSelectionViewController: UIViewController {
-    let suggestedUserName: [String] = ["intuit" , "facebook", "pcarion", "google"]
+    let suggestedUserName: [String] = ["walmartlabs", "intuit" , "facebook", "pcarion", "google"]
     
     @IBOutlet weak var githubUserName: UITextField!
     @IBOutlet weak var suggestionsTableView: UITableView!
