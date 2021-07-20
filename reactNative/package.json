@@ -9,7 +9,7 @@
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "16.8.3",
-    "react-native": "0.59.8",
+    "react-native": "0.62.3",
     "react-native-markdown-renderer": "^3.2.8",
     "react-router-native": "^5.0.0"
   },
